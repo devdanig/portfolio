@@ -4,14 +4,14 @@
 > poder retomar el trabajo en cualquier momento. **Debe actualizarse con cada cambio
 > de diseño o contenido** (ver "Cómo mantener este archivo" al final).
 
-Última actualización: 2026-06-30
+Última actualización: 2026-07-01 (2)
 
 ---
 
 ## Resumen
 
 Portfolio de una sola página (one-pager) para Daniel Garcia Fonseca, presentándose
-como **AI / Backend Developer** junior, abierto a roles junior y trabajo freelance.
+como **AI / Software Developer** junior, abierto a roles junior y trabajo freelance.
 Estética oscura, técnica, tipo "Iron Man / Kaspersky", con una visualización animada
 en canvas como pieza central del hero.
 
@@ -44,9 +44,13 @@ Header fijo + 4 secciones + footer, todo dentro de un contenedor con `maxWidth: 
 1. **Header (fixed):** logo `DGF.`, nav (Work / About / Contact), botón pill
    "Available ↗". Fondo translúcido con `backdrop-filter: blur`.
 2. **Hero (`#top`):** grid 2 columnas (`1.08fr / 0.92fr`).
-   - Izquierda: kicker "AI / Backend Developer", título "Daniel Garcia Fonseca.",
-     descripción, indicador de disponibilidad con punto pulsante, y CTAs
-     ("View work" sólido / "Get in touch ↗" ghost).
+   - Izquierda: kicker "AI / Software Developer", título "Daniel Garcia Fonseca.",
+     indicador de disponibilidad con punto pulsante. Se eliminaron el párrafo de
+     descripción y los botones "View work" / "Get in touch".
+   - **Flecha de scroll:** SVG posicionado en `absolute` al fondo centrado de la
+     sección `#top` (`left: 50%` + `translateX(-50%)`, `bottom: 34`), enlaza a
+     `#work`. El centrado va en el `<a>` y la animación `floaty` en un `<span>`
+     interno (para no pisar el `translateX`). Único CTA, minimalista.
    - Derecha: `#hero-canvas` con `<HeroCanvas heroViz="sphere" ... />`.
 3. **Work (`#work`) — (01):** "Things I've built". Grid 2 columnas de 4 tarjetas
    de proyecto (`projects[]`). Cada tarjeta: placeholder 16:9, título, `↗`,
@@ -83,15 +87,15 @@ Portado desde un componente de Claude Design (`Portfolio.dc.html`).
 ## Estilos globales (`app/globals.css`)
 
 - Reset ligero, `scroll-behavior: smooth`, `::selection` cian.
-- Keyframes: `pulse` (punto de disponibilidad) y `floaty` (definido, sin uso actual).
+- Keyframes: `pulse` (punto de disponibilidad) y `floaty` (flecha de scroll del hero).
 - Clases hover ported del diseño: `.nav-link`, `.btn-avail`, `.btn-solid`,
-  `.btn-ghost`, `.project-card`, `.contact-link`, `.social-link`.
+  `.btn-ghost`, `.project-card`, `.contact-link`, `.social-link`, `.scroll-arrow`.
 - **Responsive:** breakpoint único `@media (max-width: 880px)` — hero y grids `.col2`
   pasan a 1 columna, el canvas se mueve arriba (`order: -1`) y se oculta la nav.
 
 ## Metadata / SEO (`app/layout.tsx`)
 
-- `title`: "Daniel Garcia Fonseca — AI / Backend Developer"
+- `title`: "Daniel Garcia Fonseca — AI / Software Developer"
 - `description` + OpenGraph configurados. `lang="en"`.
 
 ## Estado actual y pendientes
@@ -116,3 +120,10 @@ Al hacer cualquier cambio de diseño, contenido o estructura:
 
 - 2026-06-30 — Creación de `context.md` documentando el estado inicial (hero con
   canvas sphere, secciones Work/About/Contact, README simplificado).
+- 2026-07-01 — Hero minimalista: eliminados el párrafo de descripción y los botones
+  ("View work" / "Get in touch"); en su lugar una flecha hacia abajo (SVG animado
+  con `floaty`, clase `.scroll-arrow`) que enlaza a `#work`. Reposicionada para
+  quedar fija al fondo centrado del hero (`position: absolute`, `bottom`, centrada
+  al 50% del viewport).
+- 2026-07-01 — Cambiado el rol de "AI / Backend Developer" a "AI / Software Developer"
+  (kicker del hero, `title` de metadata y resumen).

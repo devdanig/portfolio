@@ -120,6 +120,13 @@ section[id] {
   color: #4fd6e0;
 }
 
+.scroll-arrow {
+  transition: color 0.2s;
+}
+.scroll-arrow:hover {
+  color: #4fd6e0;
+}
+
 @media (max-width: 880px) {
   #top {
     grid-template-columns: 1fr !important;

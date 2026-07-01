@@ -17,11 +17,11 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daniel Garcia Fonseca — AI / Backend Developer",
+  title: "Daniel Garcia Fonseca — Software/AI Developer",
   description:
     "I build AI-powered backends and developer tools — turning models into reliable, production-ready systems with clean APIs.",
   openGraph: {
-    title: "Daniel Garcia Fonseca — AI / Backend Developer",
+    title: "Daniel Garcia Fonseca — AI / Software Developer",
     description:
       "I build AI-powered backends and developer tools — turning models into reliable, production-ready systems with clean APIs.",
     type: "website",

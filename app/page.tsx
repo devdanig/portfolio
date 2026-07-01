@@ -159,7 +159,7 @@ export default function Home() {
                 textTransform: "uppercase",
               }}
             >
-              AI / Backend Developer
+              AI / Software Developer
             </span>
           </div>
 
@@ -178,20 +178,6 @@ export default function Home() {
             <br />
             Fonseca<span style={{ color: "#4fd6e0" }}>.</span>
           </h1>
-
-          <p
-            style={{
-              maxWidth: 480,
-              margin: "30px 0 0",
-              fontSize: 18,
-              lineHeight: 1.6,
-              color: "#9aa0aa",
-              fontWeight: 400,
-            }}
-          >
-            I build AI-powered backends and developer tools — turning models
-            into reliable, production-ready systems with clean APIs.
-          </p>
 
           <div
             style={{
@@ -240,51 +226,6 @@ export default function Home() {
             </span>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              gap: 14,
-              marginTop: 40,
-              flexWrap: "wrap",
-            }}
-          >
-            <a
-              href="#work"
-              className="btn-solid"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 9,
-                background: "#f2f3f5",
-                color: "#08090c",
-                padding: "14px 26px",
-                borderRadius: 999,
-                textDecoration: "none",
-                fontWeight: 600,
-                fontSize: 15,
-              }}
-            >
-              View work
-            </a>
-            <a
-              href="#contact"
-              className="btn-ghost"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                border: "1px solid rgba(255,255,255,0.16)",
-                color: "#e8e9ec",
-                padding: "14px 26px",
-                borderRadius: 999,
-                textDecoration: "none",
-                fontWeight: 500,
-                fontSize: 15,
-              }}
-            >
-              Get in touch ↗
-            </a>
-          </div>
         </div>
 
         <div
@@ -300,6 +241,47 @@ export default function Home() {
         >
           <HeroCanvas heroViz="sphere" skills={skills} nodeDensity={1.8} />
         </div>
+
+        <a
+          href="#work"
+          className="scroll-arrow"
+          aria-label="Scroll to work"
+          style={{
+            position: "absolute",
+            left: "50%",
+            bottom: 34,
+            transform: "translateX(-50%)",
+            zIndex: 3,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: 44,
+            height: 44,
+            color: "#9aa0aa",
+            textDecoration: "none",
+          }}
+        >
+          <span
+            style={{
+              display: "inline-flex",
+              animation: "floaty 2.4s ease-in-out infinite",
+            }}
+          >
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 5v14M6 13l6 6 6-6" />
+            </svg>
+          </span>
+        </a>
       </section>
 
       <section
