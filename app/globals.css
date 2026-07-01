@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #08090c;
+  color: #e8e9ec;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(79, 214, 224, 0.25);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.4;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* Link hover accents (ported from the design's style-hover attributes) */
+.nav-link {
+  color: #9aa0aa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #4fd6e0;
+}
+
+.btn-avail {
+  transition: background 0.2s;
+}
+.btn-avail:hover {
+  background: #73e2ea;
+}
+
+.btn-solid {
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.btn-solid:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.btn-ghost:hover {
+  border-color: #4fd6e0;
+  color: #4fd6e0;
+}
+
+.project-card {
+  transition:
+    border-color 0.25s,
+    transform 0.25s;
+}
+.project-card:hover {
+  border-color: rgba(79, 214, 224, 0.4);
+  transform: translateY(-3px);
+}
+
+.contact-link {
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.contact-link:hover {
+  color: #4fd6e0;
+  border-color: #4fd6e0;
+}
+
+.social-link {
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.social-link:hover {
+  border-color: #4fd6e0;
+  color: #4fd6e0;
+}
+
+@media (max-width: 880px) {
+  #top {
+    grid-template-columns: 1fr !important;
+    padding-top: 140px !important;
+  }
+  #hero-canvas {
+    min-height: 360px !important;
+    order: -1;
+  }
+  .col2 {
+    grid-template-columns: 1fr !important;
+  }
+  .nav-links {
+    display: none !important;
+  }
 }
