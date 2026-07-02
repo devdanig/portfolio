@@ -4,7 +4,7 @@
 > poder retomar el trabajo en cualquier momento. **Debe actualizarse con cada cambio
 > de diseño o contenido** (ver "Cómo mantener este archivo" al final).
 
-Última actualización: 2026-07-01 (2)
+Última actualización: 2026-07-01 (3)
 
 ---
 
@@ -59,8 +59,10 @@ Header fijo + 4 secciones + footer, todo dentro de un contenedor con `maxWidth: 
    bio en 2 párrafos + 3 stats (`11+ technologies`, `AI + backend focus`,
    `∞ curiosity`).
 5. **Contact (`#contact`) — (03):** titular gigante "Let's build something.",
-   email `mailto:danielgfdev@gmail.com`, y pills sociales (GitHub / LinkedIn /
-   Résumé — actualmente `href="#"`, pendientes de enlazar).
+   email `mailto:danielgfdev@gmail.com`, y pills sociales (GitHub → enlaza a
+   `https://github.com/devdanig`, LinkedIn → enlaza a
+   `https://www.linkedin.com/in/daniel-garcia-fonseca-8313a61a9/`, ambas con
+   `target="_blank"`; Résumé sigue pendiente con `href="#"`).
 6. **Footer:** copyright + "Designed & built with care".
 
 ### Datos editables (arrays en `page.tsx`)
@@ -102,7 +104,8 @@ Portado desde un componente de Claude Design (`Portfolio.dc.html`).
 
 - [x] Hero con canvas (sphere), secciones Work/About/Contact, responsive básico.
 - [ ] Contenido de `projects[]` es de ejemplo — reemplazar por proyectos reales.
-- [ ] Enlaces sociales (GitHub / LinkedIn / Résumé) apuntan a `href="#"`.
+- [x] Enlaces de GitHub y LinkedIn conectados a las cuentas reales.
+- [ ] Enlace de Résumé / CV apunta a `href="#"`, pendiente de enlazar.
 - [ ] Imágenes reales (project shots + retrato) — hoy son placeholders rayados.
 - [ ] Sin favicon/OG image personalizados aún.
 - [ ] Deploy (Vercel) pendiente de confirmar.
@@ -127,3 +130,5 @@ Al hacer cualquier cambio de diseño, contenido o estructura:
   al 50% del viewport).
 - 2026-07-01 — Cambiado el rol de "AI / Backend Developer" a "AI / Software Developer"
   (kicker del hero, `title` de metadata y resumen).
+- 2026-07-01 — Conectados los botones sociales de GitHub y LinkedIn a las URLs
+  reales (`github.com/devdanig` y perfil de LinkedIn), abriendo en pestaña nueva.

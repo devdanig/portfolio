@@ -750,10 +750,19 @@ export default function Home() {
             marginTop: 50,
           }}
         >
-          {["GitHub ↗", "LinkedIn ↗", "Résumé / CV ↗"].map((label) => (
+          {[
+            { label: "GitHub ↗", href: "https://github.com/devdanig" },
+            {
+              label: "LinkedIn ↗",
+              href: "https://www.linkedin.com/in/daniel-garcia-fonseca-8313a61a9/",
+            },
+            { label: "Résumé / CV ↗", href: "#" },
+          ].map(({ label, href }) => (
             <a
               key={label}
-              href="#"
+              href={href}
+              target={href !== "#" ? "_blank" : undefined}
+              rel={href !== "#" ? "noopener noreferrer" : undefined}
               className="social-link"
               style={{
                 fontFamily: mono,
