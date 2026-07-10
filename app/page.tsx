@@ -134,35 +134,6 @@ export default function Home() {
         }}
       >
         <div style={{ position: "relative", zIndex: 2 }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 14,
-              marginBottom: 28,
-            }}
-          >
-            <span
-              style={{
-                width: 34,
-                height: 1,
-                background: "#4fd6e0",
-                display: "block",
-              }}
-            />
-            <span
-              style={{
-                fontFamily: mono,
-                fontSize: 12,
-                letterSpacing: "0.22em",
-                color: "#7f8794",
-                textTransform: "uppercase",
-              }}
-            >
-              AI / Software Developer
-            </span>
-          </div>
-
           <h1
             style={{
               fontFamily: sans,
@@ -178,54 +149,18 @@ export default function Home() {
             <br />
             Fonseca<span style={{ color: "#4fd6e0" }}>.</span>
           </h1>
-
-          <div
+          <p
             style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 11,
-              marginTop: 30,
+              fontFamily: sans,
+              fontWeight: 400,
+              fontSize: "clamp(16px,1.4vw,20px)",
+              lineHeight: 1,
+              margin: "14px 0 0",
+              color: "#f2f3f5",
             }}
           >
-            <span
-              style={{
-                position: "relative",
-                display: "flex",
-                width: 9,
-                height: 9,
-              }}
-            >
-              <span
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  borderRadius: "50%",
-                  background: "#4fd6e0",
-                  animation: "pulse 2.4s ease-in-out infinite",
-                }}
-              />
-              <span
-                style={{
-                  position: "relative",
-                  width: 9,
-                  height: 9,
-                  borderRadius: "50%",
-                  background: "#4fd6e0",
-                }}
-              />
-            </span>
-            <span
-              style={{
-                fontFamily: mono,
-                fontSize: 12.5,
-                letterSpacing: "0.05em",
-                color: "#aeb4bd",
-              }}
-            >
-              Open to junior roles &amp; freelance work
-            </span>
-          </div>
-
+            Software AI Developer
+          </p>
         </div>
 
         <div

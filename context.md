@@ -4,7 +4,7 @@
 > poder retomar el trabajo en cualquier momento. **Debe actualizarse con cada cambio
 > de diseño o contenido** (ver "Cómo mantener este archivo" al final).
 
-Última actualización: 2026-07-01 (3)
+Última actualización: 2026-07-09
 
 ---
 
@@ -44,9 +44,13 @@ Header fijo + 4 secciones + footer, todo dentro de un contenedor con `maxWidth: 
 1. **Header (fixed):** logo `DGF.`, nav (Work / About / Contact), botón pill
    "Available ↗". Fondo translúcido con `backdrop-filter: blur`.
 2. **Hero (`#top`):** grid 2 columnas (`1.08fr / 0.92fr`).
-   - Izquierda: kicker "AI / Software Developer", título "Daniel Garcia Fonseca.",
-     indicador de disponibilidad con punto pulsante. Se eliminaron el párrafo de
-     descripción y los botones "View work" / "Get in touch".
+   - Izquierda: título "Daniel Garcia Fonseca." y debajo un subtítulo pequeño
+     "Software AI Developer" (Hanken Grotesk, blanco `#f2f3f5`, `clamp(16px,1.4vw,20px)`,
+     sin cursiva ni rotación — se probó una fuente script/firma y no gustó). Se
+     eliminaron el kicker "AI / Software Developer", la línea decorativa cian sobre
+     el título, el indicador de disponibilidad con punto pulsante ("Open to junior
+     roles & freelance work") y el párrafo de descripción / botones "View work" /
+     "Get in touch".
    - **Flecha de scroll:** SVG posicionado en `absolute` al fondo centrado de la
      sección `#top` (`left: 50%` + `translateX(-50%)`, `bottom: 34`), enlaza a
      `#work`. El centrado va en el `<a>` y la animación `floaty` en un `<span>`
@@ -132,3 +136,10 @@ Al hacer cualquier cambio de diseño, contenido o estructura:
   (kicker del hero, `title` de metadata y resumen).
 - 2026-07-01 — Conectados los botones sociales de GitHub y LinkedIn a las URLs
   reales (`github.com/devdanig` y perfil de LinkedIn), abriendo en pestaña nueva.
+- 2026-07-09 — Hero aún más minimalista: eliminados el kicker "AI / Software
+  Developer", la línea decorativa cian sobre el título y el indicador "Open to
+  junior roles & freelance work" (punto pulsante). En su lugar, un subtítulo
+  pequeño "Software AI Developer" debajo del nombre (Hanken Grotesk, blanco,
+  ~16–20px). Se probó primero con una fuente script (Alex Brush, estilo firma,
+  rotada) pero no gustó y se descartó — no quedó ninguna referencia a esa fuente
+  en el código.
